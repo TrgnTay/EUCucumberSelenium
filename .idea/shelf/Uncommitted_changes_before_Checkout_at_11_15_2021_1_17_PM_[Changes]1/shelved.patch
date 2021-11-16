@@ -1,0 +1,44 @@
+Index: src/test/resources/features/Login.feature
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@login @smoke\r\nFeature: Users should be able to login.\r\n  Background:\r\n\r\n    Given the user is on the login page\r\n  @driver @VTY-123\r\n  Scenario: Login as a driver\r\n\r\n    When the user enters the driver information\r\n    Then the user should be able to login\r\n  @sales_manager @VTY-123\r\n  Scenario: Login as a sales manager\r\n\r\n    When the user enters the sales manager information\r\n    Then the user should be able to login\r\n  @store_manager @smoke\r\n  Scenario: Login as a store manager\r\n\r\n    When the user enters the store manager information\r\n    Then the user should be able to login
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/resources/features/Login.feature b/src/test/resources/features/Login.feature
+--- a/src/test/resources/features/Login.feature	
++++ b/src/test/resources/features/Login.feature	
+@@ -1,4 +1,4 @@
+-@login @smoke
++@login
+ Feature: Users should be able to login.
+   Background:
+ 
+@@ -13,7 +13,7 @@
+ 
+     When the user enters the sales manager information
+     Then the user should be able to login
+-  @store_manager @smoke
++  @store_manager
+   Scenario: Login as a store manager
+ 
+     When the user enters the store manager information
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"EUCucumberSelenium\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	
++++ b/.idea/compiler.xml	
+@@ -6,7 +6,7 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="EUCucumberSelenium" />
++        <module name="EU6CucumberSelenium" />
+       </profile>
+     </annotationProcessing>
+   </component>
